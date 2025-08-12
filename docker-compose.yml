@@ -1,0 +1,9 @@
+services:
+  eora-llm-gigachat:
+    build: .
+    container_name: eora-llm-gigachat
+    ports:
+      - "8000:80"
+    environment:
+      - GIGA_CHAT_KEY=${GIGA_CHAT_KEY}
+    restart: unless-stopped
